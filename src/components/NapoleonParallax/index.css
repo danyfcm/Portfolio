@@ -1,0 +1,146 @@
+:root {
+    --shift: 0;
+    --x: 0;
+    --y: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(105, 93, 70);
+}
+
+
+/* = Form = */
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+label, input {
+    display: inline-block;
+}
+
+label {
+    width: 30%;
+    text-align: left;
+    margin-left: 1vw;
+}
+
+label+input {
+    width: 20%;
+    margin: 1vh 4% 0 25%;
+}
+
+input+input {
+    float: left;
+    margin: 1vh 5vw;
+}
+
+h3{
+    text-align: left;
+}
+/* ======== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
+.container {
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+    margin: 0 auto;
+    border: 2px solid black;
+    background-image: url('./img/Napoleon\ crossing\ the\ alps\ background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 50vw 100vh;
+}
+
+.options {
+    display: flex;
+    width: 20vw;
+    position: fixed;
+    margin: 1.5vw;
+    
+}
+
+.parallax-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-wrap img {
+    --shift-px: calc(var(--shift) * 1px);
+    --size: 50vw;
+    position: absolute;
+    height: var(--size);
+    width: var(--size);
+    transform: translateX(calc((100vw - var(--x) * var(--shift-px)) / 90)) translateY(calc((100vh - var(--y) * var(--shift-px)) / 90));
+}
+
+/* Napoleon */
+.parallax-wrap img:nth-child(1) {
+    --shift: 8;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 4;
+}
+
+/* Capa */
+.parallax-wrap img:nth-child(2) {
+    --shift: 7;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 3;
+}
+
+/* Soldados */
+.parallax-wrap img:nth-child(3) {
+    --shift: 5;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+    bottom: -2vh;
+}
+
+/* Pedra 1 */
+.parallax-wrap img:nth-child(4) {
+    --shift: 8;
+    --x: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    left: -1.1vw;
+    bottom: -8.1vh
+}
+
+/* Pedra 2 */
+.parallax-wrap img:nth-child(5) {
+    --shift: 6;
+    --x: 0; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    left: -1.1vw;
+    bottom: -13vh;
+}
+
