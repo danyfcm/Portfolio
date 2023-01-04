@@ -1,8 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300&display=swap');
 
-html{height: 100%;}
+
+/* Animations */
+@keyframes rotate {
+  0%  { rotate:   0deg;}
+  25% { border-radius: 15px; }
+  50% { rotate: 180deg; }
+  75% { border-radius: 8px; }
+  100%{ rotate: 360deg;}
+}
+@keyframes zoom-hover {
+  0%  { padding: 1vw; }
+  40% { padding: 1.7vw; }
+  100%{ padding: 1.5vw; }
+}
+@keyframes zoom-hover-reverse {
+  0%  { padding: 1.5vw; }
+  40% { padding: 0.8vw; }
+  100%{ padding: 1vw; }
+}
+@keyframes bounce-text {
+  0%  { font-size: 4vh; }
+  40% { font-size: 5.5vh; }
+  100%{ font-size: 5vh; }
+}
+@keyframes bounce-text-reverse {
+  0%  { font-size: 5vh; }
+  40% { font-size: 3.5vh; }
+  100%{ font-size: 4vh; }
+}
+@keyframes backpage {
+  from { 
+    width: 0vw; 
+    height: 0vh;
+    padding: 0;
+  }
+  to { 
+    width: 101vw; 
+    height: 101vh; 
+    margin: 0;
+  }
+}
+/* == */
+
 
 body{
+
+  height: 100vh;
 
   display: grid;
 
@@ -12,6 +56,8 @@ body{
   background-color: white;
 
   font-family: 'Source Code Pro', monospace;
+
+  margin: 0;
 
 }
 
@@ -25,28 +71,64 @@ body{
 
 .App div{
 
+  z-index: 101;
+
   margin: 1vh;
   padding: 1vh;
 
 }
 
 .App a {
-  transition: 200ms ease-out;
   
-  color: black;
+  
+  animation: bounce-text-reverse 350ms forwards ease-out;
+  
+  color: rgb(30, 30, 50);
   
   font-family: 'Source Code Pro', monospace;
   font-weight: normal;
   font-size: 4vh;
 
   text-decoration: none;
+
 }
 
 .App a:hover {
   
-  transition: 200ms ease-out;
+  animation: bounce-text 350ms forwards ease-out;
 
-  font-size: 5vh;
   font-weight: bold;
 
+}
+
+.backbtn {
+  animation: zoom-hover-reverse 350ms ease-out, rotate 5000ms 200ms infinite linear;
+  cursor: pointer;
+}
+
+.backbtn, .backpage, .loadpage {
+
+  display: flex;
+  position: fixed;
+
+  background-color: white;
+  border-radius: 5px;
+  
+  z-index: 100;
+
+  padding: 1vw;
+  margin: 15px;
+
+}
+
+.backbtn:hover {
+  animation: zoom-hover 350ms forwards ease-out, rotate 10000ms infinite linear;
+}
+
+.loadpage {
+  animation: backpage 200ms forwards ease-out reverse;
+}
+
+.backpage {
+  animation: backpage 200ms forwards ease-out;
 }

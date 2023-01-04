@@ -1,11 +1,19 @@
-import NapoleonParallax from './components/NapoleonParallax';
-import './App.css'
+import $ from 'jquery'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import './App.css'
+
+import NapoleonParallax from './components/NapoleonParallax'
 
 
 function App() {
   return (
+  <div>
     
+    <div className='loadpage'></div>
+    <div className='backbtn' onClick={ () => { backpage(); setTimeout( () => window.location.href = '/', 200)} }></div>
+
+
     <BrowserRouter>
       <Routes>
 
@@ -29,8 +37,15 @@ function App() {
 
       </Routes>  
     </BrowserRouter>
+
+  </div>
   
   );
+}
+
+function backpage(){
+  $('.backbtn').toggleClass('backpage')
+  $('.backbtn').removeClass('backbtn')
 }
 
 export default App;

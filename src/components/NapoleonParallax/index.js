@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import React, { useEffect } from 'react'
 
 import "./index.css"
 
@@ -7,7 +8,6 @@ import NapoleonCapa from './img/Napoleon crossing the alps Napoleon Capa.png'
 import NapoleonSoldados from './img/Napoleon crossing the alps Soldados.png'
 import NapoleonPedra1 from './img/Napoleon crossing the alps Pedra 1.png'
 import NapoleonPedra2 from './img/Napoleon crossing the alps Pedra 2.png'
-import React, { useEffect } from 'react'
 
 const NapoleonParallax = () => {
 
@@ -28,19 +28,14 @@ const NapoleonParallax = () => {
             
         });
 
-        
-
     })
 
     return(
-    <div>
+    <div className='napoleonParallax'>
 
-        <div class='options'>
-            <a href='/'>Back</a>
-        </div>
 
-        <div class="container">
-            <div class="parallax-wrap">
+        <div className="container">
+            <div className="parallax-wrap">
                 
                 <img id="imageNapoleon" alt="imageNapoleon" src={Napoleon}/> 
                 <img id="imageCapa"     alt="imageCapa"     src={NapoleonCapa}/>
@@ -55,6 +50,7 @@ const NapoleonParallax = () => {
     )
 
 }
+
 
 
 
