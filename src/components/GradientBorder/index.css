@@ -1,0 +1,100 @@
+@keyframes background-pan {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: -200% -200%;
+    }
+}
+
+#gradientborder {
+
+    background-color: rgb(20,20,20);
+
+    display: grid;
+    
+    justify-content: center;
+    align-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+#gradient {
+
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(to right, blue, magenta,blue);
+    background-size: 200%;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    
+    height: 80vh;
+    width: 80vw;
+
+    border-radius: 5px;
+    
+    overflow: hidden;
+    
+    margin: 0;
+    
+}
+
+#card { 
+    
+    border: 10px solid rgb(20, 20, 20);
+    position: relative; 
+
+}
+
+#card:before {
+
+    background-color: rgb(20, 20, 20);
+
+    position: absolute;
+    
+    inset: 2px;
+    
+    border-radius: 5px;
+
+    content: "";
+
+}
+
+#card-content {
+
+    animation: background-pan 100s linear infinite;
+    background: radial-gradient(rgba(255, 255, 255, 0.1) 1%, transparent 8%);
+    background-position: 0% 0%;
+    background-size: 3vmin 3vmin;
+
+    position: relative;
+    
+    width: calc(100% - 5vmin);
+    height: calc(100% - 2vmin);
+
+    padding: 2vmin;
+
+}
+
+#card-content > h3, #card-content > h4 {
+
+    color: white;
+    font-weight: 400;
+
+    margin: 0;
+
+}
+
+#card-content > h3 { font-size: 5vmin; }
+
+#card-content > h4 {
+
+    font-size: 2vmin;
+    margin-top: 2vmin;
+
+}

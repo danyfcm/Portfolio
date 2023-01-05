@@ -41,10 +41,13 @@
     margin: 0;
   }
 }
+@keyframes fade {
+  from{opacity: 0;}
+  to{opacity: 100;}
+}
 /* == */
 
-
-body{
+.body{
 
   height: 100vh;
 
@@ -61,7 +64,7 @@ body{
 
 }
 
-.App {
+.Menu {
 
   display: grid;
 
@@ -69,7 +72,7 @@ body{
   
 }
 
-.App div{
+.Menu div{
 
   z-index: 101;
 
@@ -78,8 +81,7 @@ body{
 
 }
 
-.App a {
-  
+.Menu a {
   
   animation: bounce-text-reverse 350ms forwards ease-out;
   
@@ -93,7 +95,7 @@ body{
 
 }
 
-.App a:hover {
+.Menu a:hover {
   
   animation: bounce-text 350ms forwards ease-out;
 

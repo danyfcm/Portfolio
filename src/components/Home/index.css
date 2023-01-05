@@ -1,0 +1,22 @@
+.home {
+
+    display: grid;
+
+    align-content: center;
+    justify-content: center;
+
+    background: rgb(10, 10, 20);
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.hometext {
+
+    color: white;
+    text-align: left;
+
+    width: 75vw;
+
+}

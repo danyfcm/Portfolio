@@ -12,14 +12,6 @@
     background-color: rgb(75, 70, 60);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: x-large;
-}
-
 .container {
     display: flex;
 

@@ -3,37 +3,30 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import './App.css'
 
+import GradientBorder from './components/GradientBorder';
+import Home from './components/Home';
+import Menu from './components/Menu';
 import NapoleonParallax from './components/NapoleonParallax'
 
 
 function App() {
   return (
-  <div>
+  <div className='body'>
     
     <div className='loadpage'></div>
-    <div className='backbtn' onClick={ () => { backpage(); setTimeout( () => window.location.href = '/', 200)} }></div>
+    <div className='backbtn' onClick={ () => { backpage(); setTimeout( () => window.location.href = '/menu', 200)} }></div>
 
 
     <BrowserRouter>
       <Routes>
 
-        <Route exact path='/' element={
+        <Route exact path='/' element={ <Home/> }/>
 
-          <div className='App'>
-
-            <div className='title'> <a href='/napoleonParallax'>Napoleon Parallax</a> </div>
-            <div className='title'> <a href='/t2'>Trabalho 2</a> </div>
-            <div className='title'> <a href='/t3'>Trabalho 3</a> </div>
-            <div className='title'> <a href='/t4'>Trabalho 4</a> </div>
-            <div className='title'> <a href='/t5'>Trabalho 5</a> </div>
-
-          </div>
-
-        }/>
+        <Route exact path='/menu' element={ <Menu/> }/>
 
         <Route exact path='/napoleonParallax' element={ <NapoleonParallax/> }/>
 
-
+        <Route exact path='/gradientBorder' element={ <GradientBorder/> }/>
 
       </Routes>  
     </BrowserRouter>
@@ -43,7 +36,7 @@ function App() {
   );
 }
 
-function backpage(){
+function backpage() {
   $('.backbtn').toggleClass('backpage')
   $('.backbtn').removeClass('backbtn')
 }

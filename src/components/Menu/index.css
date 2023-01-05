@@ -1,0 +1,25 @@
+.backbtnblack {
+
+    background-color: rgb(10, 10, 20);
+
+    animation: zoom-hover-reverse 350ms ease-out, rotate 5000ms 200ms infinite linear;
+
+    cursor: pointer;
+      
+    display: flex;
+    
+    position: fixed;
+    left: 0vw;
+
+    border-radius: 5px;
+    
+    z-index: 100;
+  
+    padding: 1vw;
+    margin: 15px;
+
+}  
+
+.backbtnblack:hover {
+    animation: zoom-hover 350ms forwards ease-out, rotate 10000ms infinite linear;
+}
