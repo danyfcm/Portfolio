@@ -47,7 +47,9 @@
 }
 /* == */
 
-.body{
+a { text-decoration: none; }
+
+.body {
 
   height: 100vh;
 
@@ -61,45 +63,6 @@
   font-family: 'Source Code Pro', monospace;
 
   margin: 0;
-
-}
-
-.Menu {
-
-  display: grid;
-
-  text-align: center;
-  
-}
-
-.Menu div{
-
-  z-index: 101;
-
-  margin: 1vh;
-  padding: 1vh;
-
-}
-
-.Menu a {
-  
-  animation: bounce-text-reverse 350ms forwards ease-out;
-  
-  color: rgb(30, 30, 50);
-  
-  font-family: 'Source Code Pro', monospace;
-  font-weight: normal;
-  font-size: 4vh;
-
-  text-decoration: none;
-
-}
-
-.Menu a:hover {
-  
-  animation: bounce-text 350ms forwards ease-out;
-
-  font-weight: bold;
 
 }
 

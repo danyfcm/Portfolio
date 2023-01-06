@@ -10,11 +10,11 @@ const Menu = () => {
 
         <div className='Menu'>
 
-            <div className='title'> <a href='/napoleonParallax'>Napoleon Parallax</a> </div>
-            <div className='title'> <a href='/gradientBorder'>Gradient Border</a> </div>
-            <div className='title'> <a href='/t3'>Trabalho 3</a> </div>
-            <div className='title'> <a href='/t4'>Trabalho 4</a> </div>
-            <div className='title'> <a href='/t5'>Trabalho 5</a> </div>
+            <a href='/napoleonParallax'>Napoleon Parallax</a>
+            <a href='/gradientBorder'>Gradient Border</a>
+            <a href='/t3'>Trabalho 3</a>
+            <a href='/t4'>Trabalho 4</a>
+            <a href='/t5'>Trabalho 5</a>
 
         </div>
 

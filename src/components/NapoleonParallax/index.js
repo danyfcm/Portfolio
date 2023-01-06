@@ -13,26 +13,23 @@ const NapoleonParallax = () => {
 
     useEffect(() => {
 
+        const parallaxWrap = document.querySelector(".parallax-wrap")
+
         $('.container').on('mouseenter', function () {
 
-            document.querySelectorAll(".parallax-wrap").forEach(parallaxWrap =>
-        
-                parallaxWrap.addEventListener(
-                    "mousemove", ({ layerX, layerY }) => {
+            parallaxWrap.addEventListener( "mousemove", ({ layerX, layerY }) => {
                         parallaxWrap.style.setProperty("--x", layerX);
                         parallaxWrap.style.setProperty("--y", layerY);
                     }
-                ),
-        
+
             );
-            
+
         });
 
     })
 
     return(
     <div className='napoleonParallax'>
-
 
         <div className="container">
             <div className="parallax-wrap">

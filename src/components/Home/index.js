@@ -6,17 +6,11 @@ const Home = () => {
     
     return(
         <div className='home'>
-            <div className='hometext'>
 
-                <h1>Lorem ipsum</h1>
-                <h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/>
-                Nobis fugiat deserunt minima ipsum?<br/>
-                Suscipit expedita modi nisi, explicabo quas perferendis soluta nam repellat, in necessitatibus ducimus ea voluptatibus ab?<br/>
-                Illum?<br/>
-                </h4>
+                <p>Daniel Melo</p>
+                <p>danyfcm1@gmail.com</p>
+                <a href='https://github.com/danyfcm'>Github</a>
                 
-            </div>
         </div>
     )
 

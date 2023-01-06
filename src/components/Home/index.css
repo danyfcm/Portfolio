@@ -12,11 +12,14 @@
 
 }
 
-.hometext {
+.home * {
 
     color: white;
-    text-align: left;
 
-    width: 75vw;
+    font-size: 5vh;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin: 3vh;
 
 }

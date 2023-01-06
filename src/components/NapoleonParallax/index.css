@@ -43,11 +43,10 @@
 
 .parallax-wrap img {
     --shift-px: calc(var(--shift) * 1px);
-    --size: 50vw;
     position: absolute;
-    height: var(--size);
-    width: var(--size);
-    transform: translateX(calc((100vw - var(--x) * var(--shift-px)) / 90)) translateY(calc((100vh - var(--y) * var(--shift-px)) / 90));
+    height: 50vw;
+    width: 50vw;
+    transform: translateX(calc( (100vw - var(--x) * var(--shift-px) ) / 90 )) translateY(calc( (100vh - var(--y) * var(--shift-px) ) / 90 ));
 }
 
 /* Napoleon */
