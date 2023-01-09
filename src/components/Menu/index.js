@@ -12,7 +12,7 @@ const Menu = () => {
 
             <a href='/napoleonParallax'>Napoleon Parallax</a>
             <a href='/gradientBorder'>Gradient Border</a>
-            <a href='/t3'>Trabalho 3</a>
+            <a href='/constellation'>Constellations</a>
             <a href='/t4'>Trabalho 4</a>
             <a href='/t5'>Trabalho 5</a>
 

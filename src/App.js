@@ -5,7 +5,7 @@ import './App.css'
 
 import GradientBorder from './components/GradientBorder'
 import Home from './components/Home'
-import LinePointer from './components/LinePointer'
+import Constellation from './components/Constellation'
 import Menu from './components/Menu'
 import NapoleonParallax from './components/NapoleonParallax'
 
@@ -35,7 +35,7 @@ function App() {
 
 					<Route exact path="/gradientBorder" element={<GradientBorder />} />
 
-					<Route exact path="/t3" element={<p>TODO</p>} />
+					<Route exact path="/constellation" element={<Constellation />} />
 					
 					<Route exact path="/t4" element={<p>TODO</p>} />
 
