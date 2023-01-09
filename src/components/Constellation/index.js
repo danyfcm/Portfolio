@@ -23,7 +23,6 @@ function Constellation() {
             this.y = y
             this.size = 200
             this.circle = new Path2D()
-            this.mouseInside = false
 
         }
 
@@ -32,7 +31,7 @@ function Constellation() {
             this.x          = x
             this.y          = y
             this.area       = area
-            this.size       = 3
+            this.size       = 4
 
         }
 
@@ -55,8 +54,8 @@ function Constellation() {
 
         }
 
-        Area.prototype.checkMouse = function( e ){
-            this.mouseInside = ctx2.isPointInPath(this.circle, e.clientX, e.clientY)
+        Area.prototype.checkMouse = function( x, y ) {
+            return ctx2.isPointInPath( this.circle, x, y )
         }
 
         let balls = []
@@ -93,36 +92,29 @@ function Constellation() {
             //desenhar as bolas que foram criadas
             canvas2.addEventListener( 'mousemove',function( e ) {
                 
-            ctx2.clearRect( 0, 0, width, height)
+                ctx2.clearRect( 0, 0, width, height )
 
-            //ctx2.fillRect( 0, 0, width, height)
+                var x = e.clientX
+                var y = e.clientY
 
-            var x = e.clientX
-            var y = e.clientY
+                
+                for( let i = 0; i < balls.length; i++ ){
 
-            
-            for( let i = 0; i < balls.length; i++ ){
+                    if( balls[i].area.checkMouse(x, y) ) {
 
-                balls[i].area.checkMouse(e)
+                        ctx2.beginPath()
 
-                if(balls[i].area.mouseInside) {
-
-                    ctx2.beginPath()
-
-                    ctx2.strokeStyle = 'rgba( ' + aleatorio(100, 255) + ', ' + aleatorio(100, 255) + ', ' + aleatorio(100, 255) + ', 1)'
-                    ctx2.moveTo(balls[i].x, balls[i].y)
-                    ctx2.lineTo(x, y)
-                    ctx2.stroke()
+                        ctx2.strokeStyle = 'rgba( ' + aleatorio(100, 255) + ', ' + aleatorio(100, 255) + ', ' + aleatorio(100, 255) + ', 1)'
+                        ctx2.lineWidth = 1.5
+                        ctx2.moveTo(balls[i].x, balls[i].y)
+                        ctx2.lineTo(x, y)
+                        ctx2.stroke()
+                    }
                 }
-            }
-            
-            //console.log('Teste')
+                
+                //console.log('Teste')
 
             })
-               
-
-            //chama recursivamente a funcao
-            requestAnimationFrame( loop )
 
         }
 
