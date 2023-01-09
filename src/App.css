@@ -67,14 +67,17 @@ a { text-decoration: none; }
 }
 
 .backbtn {
+
   animation: zoom-hover-reverse 350ms ease-out, rotate 5000ms 200ms infinite linear;
   cursor: pointer;
+  
 }
 
 .backbtn, .backpage, .loadpage {
 
-  display: flex;
   position: fixed;
+
+  left: 0;
 
   background-color: white;
   border-radius: 5px;

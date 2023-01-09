@@ -10,7 +10,7 @@
 
 #gradientborder {
 
-    background-color: rgb(20,20,20);
+    background-color: rgb(10,10,20);
 
     display: grid;
     
@@ -35,8 +35,6 @@
     
     height: 80vh;
     width: 80vw;
-
-    border-radius: 5px;
     
     overflow: hidden;
     
@@ -46,21 +44,19 @@
 
 #card { 
     
-    border: 10px solid rgb(20, 20, 20);
+    border: 10px solid rgb(10, 10, 20);
     position: relative; 
 
 }
 
 #card:before {
 
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(10, 10, 20);
 
     position: absolute;
     
     inset: 2px;
     
-    border-radius: 5px;
-
     content: "";
 
 }

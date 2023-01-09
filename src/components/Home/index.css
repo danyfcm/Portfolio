@@ -1,8 +1,15 @@
+@keyframes curve {
+    from { background-position: 0%;  }
+    to   { background-position: 200%;}
+}
+
 .home {
 
-    display: grid;
+    display: flex;
+    
+    flex-direction: column;
 
-    align-content: center;
+    align-items: center;
     justify-content: center;
 
     background: rgb(10, 10, 20);
@@ -12,7 +19,7 @@
 
 }
 
-.home * {
+.home a, .home p {
 
     color: white;
 
@@ -20,6 +27,91 @@
     text-align: center;
     text-transform: uppercase;
 
-    margin: 3vh;
+    margin: 0;
+
+    z-index: 6;
+
+
+}
+
+.home a {
+
+    text-decoration: underline transparent;
+    transition: 300ms;
+    
+}
+
+.home a:hover {
+    text-decoration-color: white;
+}
+
+
+
+.curves *{
+
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    width: 200vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    margin: 0;
+
+}
+
+.curve1 {
+
+    animation: curve 30s infinite ease-in-out alternate-reverse;
+    
+    background: url(./waves1.svg);
+
+    
+    z-index: 5;
+    
+}
+
+.curve2 {
+
+    animation: curve 30s infinite ease-in-out alternate;
+
+    background: url(./waves2.svg);
+
+    z-index: 4;
+
+}
+    
+
+.curve3 {
+
+    animation: curve 40s infinite linear alternate-reverse;
+
+    background: url(./waves3.svg);
+
+    z-index: 3;
+
+
+}
+
+.curve4 {
+    
+    animation: curve 40s infinite linear ease-in-out alternate;
+
+    background: url(./waves4.svg);
+
+    z-index: 2;
+
+}
+
+.curve5 {
+
+    animation: curve 50s infinite ease-in-out alternate-reverse;
+
+    background: url(./waves5.svg);
+
+    z-index: 1;
 
 }
