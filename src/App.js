@@ -5,12 +5,14 @@ import './App.css'
 
 import GradientBorder from './components/GradientBorder'
 import Home from './components/Home'
+import LinePointer from './components/LinePointer'
 import Menu from './components/Menu'
 import NapoleonParallax from './components/NapoleonParallax'
 
 function App() {
 	return (
 		<div className="body">
+
 			<div className="loadpage"></div>
 			<div
 				className="backbtn"
@@ -25,22 +27,20 @@ function App() {
 
 					<Route exact path="/menu" element={<Menu />} />
 
-					<Route
-						exact
-						path="/napoleonParallax"
-						element={<NapoleonParallax />}
-					/>
+					<Route exact path="/napoleonParallax" element={<NapoleonParallax />} />
 
-					<Route
-						exact
-						path="/gradientBorder"
-						element={<GradientBorder />}
-					/>
+					<Route exact path="/gradientBorder"	element={<GradientBorder />} />
+
+					<Route exact path="/t3"	element={ <LinePointer /> } />
 				</Routes>
 			</BrowserRouter>
+
 		</div>
 	)
 }
+
+
+
 
 function backpage() {
 	$('.backbtn').toggleClass('backpage')
