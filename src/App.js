@@ -11,13 +11,18 @@ import NapoleonParallax from './components/NapoleonParallax'
 function App() {
 	return (
 		<div className="body">
+
 			<div className="loadpage"></div>
+			
+
 			<div
 				className="backbtn"
 				onClick={() => {
 					backpage()
-					setTimeout(() => (window.location.href = '/menu'), 200)
-				}}></div>
+					setTimeout( () => ( window.location.href = '/menu' ), 200 )
+				}}>
+			</div>
+
 
 			<BrowserRouter>
 				<Routes>
@@ -25,19 +30,19 @@ function App() {
 
 					<Route exact path="/menu" element={<Menu />} />
 
-					<Route
-						exact
-						path="/napoleonParallax"
-						element={<NapoleonParallax />}
-					/>
+					<Route exact path="/napoleonParallax" element={<NapoleonParallax />} />
 
-					<Route
-						exact
-						path="/gradientBorder"
-						element={<GradientBorder />}
-					/>
+					<Route exact path="/gradientBorder" element={<GradientBorder />} />
+
+					<Route exact path="/t3" element={<p>TODO</p>} />
+					
+					<Route exact path="/t4" element={<p>TODO</p>} />
+
+					<Route exact path="/t5" element={<p>TODO</p>} />
+
 				</Routes>
 			</BrowserRouter>
+
 		</div>
 	)
 }

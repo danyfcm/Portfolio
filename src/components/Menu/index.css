@@ -6,19 +6,21 @@
 
 .Menu a {
   animation: bounce-text-reverse 350ms forwards ease-out;
-
+  
   color: rgb(30, 30, 50);
-
+  
   font-family: "Source Code Pro", monospace;
   font-weight: normal;
   font-size: 4vh;
-
+  
   text-transform: uppercase;
   text-decoration: none;
   
   z-index: 101;
-
+  
   padding: 2vh;
+  
+  transition: 200ms;
 }
 
 .Menu a:hover {
@@ -28,31 +30,11 @@
 }
 
 .Menu:hover a:not(:hover) {
-  transition: 200ms;
   opacity: 0.2;
 }
 
-.backbtnblack {
-  background-color: rgb(10, 10, 20);
+.black {
 
-  animation: zoom-hover-reverse 350ms ease-out,
-    rotate 5000ms 200ms infinite linear;
+  background-color: black;
 
-  cursor: pointer;
-
-  display: flex;
-
-  position: fixed;
-  left: 0vw;
-
-  border-radius: 5px;
-
-  z-index: 100;
-
-  padding: 1vw;
-  margin: 15px;
-}
-
-.backbtnblack:hover {
-  animation: zoom-hover 350ms forwards ease-out, rotate 10000ms infinite linear;
 }

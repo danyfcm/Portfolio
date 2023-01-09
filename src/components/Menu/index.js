@@ -6,7 +6,7 @@ const Menu = () => {
     return(
     <div className='body'>
 
-        <div className='backbtnblack' onClick={ () => window.location.href = '/' } />
+        <div className='backbtn black' onClick={ () => window.location.href = '/' } />
 
         <div className='Menu'>
 
