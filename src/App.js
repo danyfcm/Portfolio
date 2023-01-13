@@ -8,6 +8,7 @@ import Home from './components/Home'
 import Constellation from './components/Constellation'
 import Menu from './components/Menu'
 import NapoleonParallax from './components/NapoleonParallax'
+import More from './components/More'
 
 function App() {
 	return (
@@ -37,9 +38,7 @@ function App() {
 
 					<Route exact path="/constellation" element={<Constellation />} />
 					
-					<Route exact path="/t4" element={<p>TODO</p>} />
-
-					<Route exact path="/t5" element={<p>TODO</p>} />
+					<Route exact path="/More" element={<More/>} />
 
 				</Routes>
 			</BrowserRouter>

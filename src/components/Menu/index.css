@@ -5,22 +5,19 @@
 }
 
 .Menu a {
+
   animation: bounce-text-reverse 350ms forwards ease-out;
   
   color: rgb(30, 30, 50);
   
-  font-family: "Source Code Pro", monospace;
-  font-weight: normal;
-  font-size: 4vh;
-  
   text-transform: uppercase;
-  text-decoration: none;
   
   z-index: 101;
   
   padding: 2vh;
   
   transition: 200ms;
+
 }
 
 .Menu a:hover {
@@ -38,3 +35,5 @@
   background-color: black;
 
 }
+
+
