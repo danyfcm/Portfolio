@@ -86,11 +86,21 @@
 
 }
 
-#card-content > h3 { font-size: 5vmin; }
+#card-content > h3 { 
+    font-size: 3rem; 
+}
 
 #card-content > h4 {
-
-    font-size: 2vmin;
     margin-top: 2vmin;
+}
 
+@media (width <= 600px) {
+
+    #gradient {
+        grid-template-columns: auto;
+    }
+    #card-content > h3 {
+        font-size: 2rem;
+    }
+    
 }

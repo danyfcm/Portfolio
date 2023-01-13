@@ -1,8 +1,7 @@
+
 .more {
 
     display: grid;
-
-    grid-template-columns: 1fr 1fr;
 
     background: rgb(10, 10, 20);
 
@@ -25,6 +24,7 @@
     align-self: center;
 
     height: 20vw;
+    width: 80vw;
 
     opacity: 0;
 
@@ -32,25 +32,27 @@
 
 .project:nth-child(1) {
 
-    animation: fade 1.5s 20ms forwards ease, slide-up 1.5s 200ms forwards ease;
+    animation: fade 1.5s 30ms forwards ease, slide-up 1.5s 20ms forwards ease;
 
     margin-left: 10vw;
     
 }
 
 .project:nth-child(2) {
+    justify-self: right;
 
-    animation: fade 1.5s 220ms forwards ease, slide-up 1.5s 400ms forwards ease;
+    animation: fade 1.5s 230ms forwards ease, slide-up 1.5s 220ms forwards ease;
 
     margin-right: 10vw;
 
 }
 
 .project .content {
+    display: grid;
 
     transition: 300ms ease;
     
-    transform: translate(-110%);
+    transform: translate(-10%);
     
     font-size: 1.25em;
     
@@ -62,14 +64,62 @@
 
 .project:nth-child(2) .content {
 
-    transform: translate(110%);
+    transform: translate(10%);
+
+    justify-items: right;
+
 }
 
-.project:hover .content {
 
-    transform: translate(0);
+.project:nth-child(2):hover .content{
+
+    transform: translate(-5%);
 
     opacity: 1;
 
 }
 
+.project:nth-child(1):hover .content{
+
+    transform: translate(5%);
+
+    opacity: 1;
+
+}
+
+.project > img {
+    transition: 200ms;
+}
+
+.project:hover > img, .content > img:hover {
+    transform: scale(110%);
+}
+
+.content > img {
+
+    transition: 200ms;
+    cursor: pointer;
+    
+}
+
+
+@media (width <= 600px) {
+
+    .project {
+        flex-direction: column-reverse;
+        margin-top: 40vh;
+    }
+
+    .project .content {
+        font-size: 1rem;
+        opacity: 1;
+    }
+
+    .project > img {
+        width: 80vw;
+    }
+    .content > img {
+        width: 20vw;        
+    }
+    
+}

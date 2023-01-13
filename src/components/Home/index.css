@@ -23,7 +23,7 @@
 
     color: white;
 
-    font-size: 5vh;
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
 
@@ -114,4 +114,12 @@
 
     z-index: 1;
 
+}
+
+@media (orientation: portrait) {
+
+    .home a, .home p {
+        font-size: 2rem;
+    }
+    
 }

@@ -3,31 +3,31 @@
 
 /* Animations */
 @keyframes rotate {
-  0%  { rotate:   0deg;}
+  0%  { rotate:   0deg;      }
   25% { border-radius: 15px; }
-  50% { rotate: 180deg; }
-  75% { border-radius: 8px; }
-  100%{ rotate: 360deg;}
+  50% { rotate: 180deg;      }
+  75% { border-radius: 8px;  }
+  100%{ rotate: 360deg;      }
 }
 @keyframes zoom-hover {
-  0%  { padding: 1vw; }
-  40% { padding: 1.7vw; }
-  100%{ padding: 1.5vw; }
+  0%  { transform: scale(1);   }
+  40% { transform: scale(1.7); }
+  100%{ transform: scale(1.5); }
 }
 @keyframes zoom-hover-reverse {
-  0%  { padding: 1.5vw; }
-  40% { padding: 0.8vw; }
-  100%{ padding: 1vw; }
+  0%  { transform: scale(1.5); }
+  40% { transform: scale(0.8); }
+  100%{ transform: scale(1);   }
 }
 @keyframes bounce-text {
-  0%  { font-size: 3rem; }
+  0%  { font-size: 3rem;   }
   40% { font-size: 4.5rem; }
-  100%{ font-size: 4rem; }
+  100%{ font-size: 4rem;   }
 }
 @keyframes bounce-text-reverse {
-  0%  { font-size: 4rem; }
+  0%  { font-size: 4rem;   }
   40% { font-size: 2.5rem; }
-  100%{ font-size: 3rem; }
+  100%{ font-size: 3rem;   }
 }
 @keyframes backpage {
   from { 
@@ -42,13 +42,30 @@
   }
 }
 @keyframes fade {
-  from{opacity: 0;}
-  to{opacity: 100;}
+  from{ opacity: 0;   }
+  to  { opacity: 100; }
 }
 @keyframes slide-up {
-  from{transform: translate(0, 100vh);}
-  to  {transform: translate(0, 0);}
-  
+  from{ transform: translate(0, 100vh); }
+  to  { transform: translate(0, 0);     }
+}
+@keyframes bounce {
+  0%   { transform: translate(0,  0);      }
+  25%  { transform: translate(0,  0.5rem); }
+  50%  { transform: translate(0, -1rem);   }
+  75%  { transform: translate(0,  0rem);   }
+  100% { transform: translate(0,  0rem);   }
+}
+
+@keyframes bounce-text-portrait {
+  0%  { font-size: 2rem;   }
+  40% { font-size: 3.5rem; }
+  100%{ font-size: 3rem;   }
+}
+@keyframes bounce-text-reverse-portrait {
+  0%  { font-size: 3rem;   }
+  40% { font-size: 1.5rem; }
+  100%{ font-size: 2rem;   }
 }
 /* == */
 
@@ -104,4 +121,13 @@ a { text-decoration: none; }
 
 .backpage {
   animation: backpage 200ms forwards ease-out;
+}
+
+
+@media (orientation: portrait) {
+
+  .backbtn, .backpage, .loadpage {
+    padding: 3vw;
+  }
+  
 }

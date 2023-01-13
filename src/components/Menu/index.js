@@ -14,7 +14,7 @@ const Menu = () => {
             <a href='/napoleonParallax'>Napoleon Parallax</a>
             <a href='/gradientBorder'>Gradient Border</a>
             <a href='/constellation'>Constellations</a>
-            <a href='/more'> <p>.</p> <p>.</p> <p>.</p> </a>
+            <a href='/more' className='morebtn'> <p>.</p> <p>.</p> <p>.</p> </a>
 
         </div>
 
